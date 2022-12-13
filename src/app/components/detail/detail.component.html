@@ -1,0 +1,8 @@
+<h3>Profil de {{currentFan.nom}}</h3>
+<p>Date de naissance : {{currentFan.dateNaissance | date : 'dd-MM-yyyy'}}</p>
+<h4>Séries préférées</h4>
+<ul>
+    <li *ngFor="let serie of currentFan.series">
+        {{serie}}
+    </li>
+</ul>

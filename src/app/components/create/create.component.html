@@ -1,0 +1,18 @@
+<h3>Nouveau fan</h3>
+<form [formGroup]="fg" (ngSubmit)="submitForm()">
+    <p>
+        Nom : <input type="text" formControlName="nom">
+    </p>
+    <p>
+        Date de naissance : <input type="date" formControlName="dateNaissance">
+    </p>
+
+    <hr />
+    <h4>Séries Favorites <button type="button" (click)="ajouterSerie()">+</button></h4>
+    <div *ngIf="getSeriesArray()" formArrayName="series">
+        <p *ngFor="let s of getSeriesArray().controls; let i = index">
+            Série {{i+1}} : <input type="text" [formControlName]="i">
+        </p>
+    </div>
+    <button type="submit" [disabled]="fg.invalid">Valider</button>
+</form>
