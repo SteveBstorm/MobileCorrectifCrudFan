@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { CreateComponent } from './components/create/create.component';
 import { ListComponent } from './components/list/list.component';
 import { DetailComponent } from './components/detail/detail.component';
+import { UpdateComponent } from './components/update/update.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CreateComponent,
     ListComponent,
-    DetailComponent
+    DetailComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,

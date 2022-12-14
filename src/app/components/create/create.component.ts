@@ -43,4 +43,8 @@ export class CreateComponent implements OnInit {
     this.getSeriesArray().push(new FormControl('', Validators.required))
   }
 
+  deleteSerie(index : number){
+    this.getSeriesArray().removeAt(index)
+  }
+
 }

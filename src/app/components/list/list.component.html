@@ -1,6 +1,7 @@
 <h3>Liste des fans</h3>
 <ul>
    <li *ngFor="let fan of listFan; let i = index">
-     <a [routerLink]="['../detail/', i]">{{fan.nom}}</a>
+     <a [routerLink]="['../detail/', i]">{{fan.nom}}</a> |
+     <a [routerLink]="['../update/', i]">Mettre à jour</a>
    </li>
 </ul>

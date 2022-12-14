@@ -16,7 +16,6 @@
         <p *ngFor="let s of getSeriesArray().controls; let i = index">
             Série {{i+1}} : <input type="text" [formControlName]="i">
             <button type="button" (click)="deleteSerie(i)">X</button>
-
         </p>
     </div>
     <button type="submit" [disabled]="fg.invalid">Valider</button>

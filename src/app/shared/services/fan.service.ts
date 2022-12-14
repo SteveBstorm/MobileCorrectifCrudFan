@@ -24,4 +24,13 @@ export class FanService {
   getByIndex(index : number) : Fan {
     return this.listeFan[index]
   }
+
+  update(fan : Fan, index : number) {
+    this.listeFan[index] = fan
+    this.router.navigate(['list'])
+  }
+
+  deleteSerie(idFan : number, idSerie : number){
+    this.listeFan[idFan].series.splice(idSerie,1)
+  }
 }
